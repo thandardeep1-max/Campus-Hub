@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Campus Food Review</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="campus.png" alt="Campus Hub Logo">
+                Campus Hub
+            </a>
+            <a href="index.html" class="back-link">⬅️ View All Reviews</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-wrapper">
+            <h2>🍔 Add New Food Review</h2>
+            <p class="form-subtitle">Share your honest culinary experience with fellow students.</p>
+
+            <form id="reviewForm">
+                <label for="dishName">Dish Name</label>
+                <input type="text" id="dishName" required placeholder="e.g., Samosa, Cheese Maggie, Pav Bhaji">
+
+                <label for="location">Canteen Stall Location</label>
+                <input type="text" id="location" required
+                    placeholder="e.g., Main Canteen, Nescafe Counter, Ground Floor Stall">
+
+                <label for="price">Price (₹)</label>
+                <input type="number" id="price" required min="1" placeholder="e.g., 40">
+
+                <label for="rating">Rating (1 to 5 Stars)</label>
+                <select id="rating" required>
+                    <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
+                    <option value="4">⭐⭐⭐⭐ (4/5 Good)</option>
+                    <option value="3">⭐⭐⭐ (3/5 Average)</option>
+                    <option value="2">⭐⭐ (2/5 Bad)</option>
+                    <option value="1">⭐ (1/5 Terrible)</option>
+                </select>
+
+                <label for="reviewText">Your Review Description</label>
+                <textarea id="reviewText" required
+                    placeholder="How did it taste? Was it served hot? Is it worth the money?"></textarea>
+
+                <button type="submit">Publish Review</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
